@@ -21,6 +21,7 @@ SUBDIRS = \
 	library-template \
 	project-tree \
 	python-gi-imports-completion \
+	meson \
 	mingw \
 	python-pack \
 	support \

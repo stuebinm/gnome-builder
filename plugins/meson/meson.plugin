@@ -1,0 +1,10 @@
+[Plugin]
+Name=Meson
+Description=Meson build system support
+Authors=Ben Iofel <iofelben@gmail.com>
+Copyright=Copyright © 2016 Ben Iofel
+Builtin=true
+Loader=python3
+Module=meson_build
+X-Project-File-Filter-Pattern=meson.build
+X-Project-File-Filter-Name=Meson Project (meson.build)
