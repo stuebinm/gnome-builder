@@ -163,6 +163,7 @@ libide_1_0_la_public_headers = \
 	util/ide-pango.h \
 	util/ide-posix.h \
 	util/ide-rgba.h \
+	util/ide-task.h \
 	$(NULL)
 
 libide_1_0_la_public_sources = \
@@ -312,6 +313,7 @@ libide_1_0_la_public_sources = \
 	util/ide-pango.c \
 	util/ide-posix.c \
 	util/ide-rgba.c \
+	util/ide-task.c \
 	$(NULL)
 
 libide_1_0_la_SOURCES = \

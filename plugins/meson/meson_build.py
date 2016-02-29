@@ -52,12 +52,11 @@ class MesonBuilder(Ide.Builder):
 
         res = MesonBuildResult()
         task = Gio.Task.new(self, cancellable, callback)
-        task.return_pointer(res)
+        Ide.task_return_object(task, res)
         return (res)
 
     def do_build_finish(self, result):
         return result.propagate_pointer()
-
 
 class MesonBuildResult(Ide.BuildResult):
     pass
