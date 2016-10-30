@@ -1,0 +1,19 @@
+<schemalist>
+  <schema id="org.gnome.builder.plugins.rustup" path="/org/gnome/builder/plugins/rustup/" gettext-domain="gnome-builder">
+    <key name="auto-update" type="b">
+      <default>false</default>
+      <summary>Auto-update using rustup</summary>
+      <description>If rustup should be used to auto-update your rust installation.</description>
+    </key>
+    <key name="channel" type="s">
+      <default>"stable"</default>
+      <summary>The RustUp channel</summary>
+      <description>The channel that should be used for rustup updates.</description>
+    </key>
+    <key name="prefix" type="s">
+      <default>"~/.local"</default>
+      <summary>Installation prefix</summary>
+      <description>The prefix for installing rust.</description>
+    </key>
+  </schema>
+</schemalist>
