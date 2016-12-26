@@ -1,7 +1,6 @@
 SUBDIRS = \
 	autotools \
 	autotools-templates \
-	build-tools \
 	c-pack \
 	cargo \
 	clang \

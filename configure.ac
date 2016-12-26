@@ -275,7 +275,6 @@ dnl Check for supported plugins
 dnl ***********************************************************************
 m4_include([plugins/autotools/configure.ac])
 m4_include([plugins/autotools-templates/configure.ac])
-m4_include([plugins/build-tools/configure.ac])
 m4_include([plugins/c-pack/configure.ac])
 m4_include([plugins/cargo/configure.ac])
 m4_include([plugins/clang/configure.ac])
