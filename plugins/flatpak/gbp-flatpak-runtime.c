@@ -958,6 +958,7 @@ gbp_flatpak_runtime_prepare_configuration (IdeRuntime       *runtime,
                                            IdeConfiguration *configuration)
 {
   GbpFlatpakRuntime* self = (GbpFlatpakRuntime *)runtime;
+  g_autofree gchar *manifest_path = NULL;
 
   g_assert (GBP_IS_FLATPAK_RUNTIME (self));
   g_assert (IDE_IS_CONFIGURATION (configuration));
@@ -968,8 +969,17 @@ gbp_flatpak_runtime_prepare_configuration (IdeRuntime       *runtime,
         ide_configuration_set_app_id (configuration, self->app_id);
     }
 
+  if (self->manifest != NULL)
+    manifest_path = g_file_get_path (self->manifest);
+
   ide_configuration_set_prefix (configuration, "/app");
+
   ide_configuration_set_internal_string (configuration, "flatpak-repo-name", FLATPAK_REPO_NAME);
+  ide_configuration_set_internal_string (configuration, "flatpak-sdk", self->sdk);
+  ide_configuration_set_internal_string (configuration, "flatpak-runtime", self->platform);
+  ide_configuration_set_internal_string (configuration, "flatpak-branch", self->branch);
+  ide_configuration_set_internal_string (configuration, "flatpak-module", self->primary_module);
+  ide_configuration_set_internal_string (configuration, "flatpak-manifest", manifest_path);
 }
 
 static void
